@@ -1,1 +1,5 @@
-export class Libro {}
+export class Libro {
+
+    titulo: string;
+
+}
