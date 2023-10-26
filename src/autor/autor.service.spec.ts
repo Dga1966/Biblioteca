@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { AutorService } from './autor.service';
+import { AutorService } from './AutorService';
 
 describe('AutorService', () => {
   let service: AutorService;
