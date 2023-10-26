@@ -1,9 +1,17 @@
-export class Autor {
+import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
+
+@Entity()
+export class Autor {
+    @PrimaryGeneratedColumn()
+    id: number;
+
+    @Column()
     nombre: string;
 
-    mail: string;
+    @Column()
+ mail: string;
 
-    activo: boolean;
-
+    @Column({ default: true })
+  activo: boolean;
 }
