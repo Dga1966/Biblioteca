@@ -4,10 +4,12 @@ import { AppService } from './app.service';
 import { AutorModule } from './autor/autor.module';
 import { LibroModule } from './libro/libro.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { Libro } from './libro/entities/libro.entity';
+import { Autor } from './autor/entities/autor.entity';
 
 @Module({
   imports: [
-    AutorModule, 
+    AutorModule,
     LibroModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
@@ -16,7 +18,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: 'biblio',
       password: 'secret',
       database: 'biblioteca',
-      entities: [Autor,Libro],
+      entities: [Autor, Libro],
       synchronize: true,
     }),
   ],

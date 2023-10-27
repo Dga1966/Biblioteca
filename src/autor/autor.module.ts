@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AutorService } from './AutorService';
 import { AutorController } from './autor.controller';
-import { Autor } from './autor.entity';
+import { AutorService } from './autor.service';
+import { Autor } from './entities/autor.entity';
+
 
 
 @Module({

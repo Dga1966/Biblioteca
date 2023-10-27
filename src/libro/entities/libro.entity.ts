@@ -5,13 +5,13 @@ export class Libro {
     @PrimaryGeneratedColumn()
     id:number;
     
-    @Column
+    @Column()
     autor: string;
 
-    @Column
+    @Column()
     titulo: string;
 
-    @Column
+    @Column()
     paginas: number;
 
 }

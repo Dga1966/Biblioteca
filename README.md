@@ -71,3 +71,13 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+
+curl -X POST 'http://localhost:3000/autor' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "nombre": "Juan",
+    "mail": "juan@gmail.com"
+}'
+
