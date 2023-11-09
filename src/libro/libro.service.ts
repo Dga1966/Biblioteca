@@ -14,19 +14,21 @@ export class LibroService {
   ) {}
 
   create(createLibroDto: CreateLibroDto) {
-    return 'This action adds a new libro';
+    return this.libroRepository.save(createLibroDto);
   }
 
   findAll(): Promise<Libro[]> {
-    return this.libroRepository.find();
+    return this.libroRepository.find({
+      relations: { autor: true },
+    });
   }
 
   findOne(id: number): Promise<Libro | null> {
-    return this.libroRepository.findOneBy({ id });
+    return this.libroRepository.findOne({ where: { id }, relations: { autor: true } });
   }
 
   update(id: number, updateLibroDto: UpdateLibroDto) {
-    return `This action updates a #${id} libro`;
+    return this.libroRepository.update(id, updateLibroDto);
   }
 
   async remove(id: number): Promise<void> {

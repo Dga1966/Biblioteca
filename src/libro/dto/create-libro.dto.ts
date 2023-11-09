@@ -1,1 +1,4 @@
-export class CreateLibroDto {}
+export class CreateLibroDto {
+    titulo: string;
+    paginas: number;
+}

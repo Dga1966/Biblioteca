@@ -1,0 +1,116 @@
+{
+    "info": {
+        "_postman_id": "5c8b9036-3035-46cf-92b9-ea056da8e1dd",
+        "name": "Libro",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Listar todos los libros",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/libro",
+                    "path": [
+                        "libro"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "Listar un libro",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/libro/2",
+                    "path": [
+                        "libro",
+                        "2"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "Crear un libro",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:3000/libro",
+                    "path": [
+                        "libro"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\r\n\"titulo\": \"titulo2\",\r\n\"paginas\": 12,\r\n\"autor\": 1\r\n}"
+                }
+            }
+        },
+        {
+            "name": "Actualizar un libro",
+            "request": {
+                "method": "PATCH",
+                "url": {
+                    "raw": "http://localhost:3000/libro/2",
+                    "path": [
+                        "libro",
+                        "2"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\r\n\"titulo\": \"titluoActualizado2\",\r\n\"paginas\": 88,\r\n\"autor\": 1\r\n}"
+                }
+            }
+        },
+        {
+            "name": "Borrar un libro",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:3000/libro/4",
+                    "path": [
+                        "libro",
+                        "4"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        }
+    ]
+}
